@@ -4,86 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vityss — Privacy Policy</title>
-  <meta name="description" content="How Vityss handles your data: everything health-related stays on your device.">
+  <meta name="description" content="How Vityss handles your data: health data stays on your device. Optional diagnostics only.">
+  <link rel="canonical" href="https://vitysshealth-arch.github.io/privacy.html">
   <link rel="icon" type="image/png" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="legal">
-    <a class="back" href="index.html">← Vityss</a>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 21 August 2026</p>
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img class="brand-icon" src="icon.png" alt=""> Vityss</a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="privacy.html" class="active">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a class="btn" href="index.html#download">Get Vityss</a>
+      </div>
+    </div>
+  </nav>
 
-    <p>Vityss is built to be private by default. It reads Apple Health, derives your scores on your
-      iPhone and Apple Watch, and shows them to you. This policy explains exactly what stays on your
-      device and the one narrow thing that can leave it.</p>
+  <main class="legal-page">
+    <div class="wrap">
+      <div class="legal-tabs" role="tablist" aria-label="Legal">
+        <a class="legal-tab is-active" href="privacy.html" role="tab" aria-selected="true">Privacy Policy</a>
+        <a class="legal-tab" href="terms.html" role="tab" aria-selected="false">Terms of Use</a>
+      </div>
 
-    <h2>Not medical advice</h2>
-    <p>Vityss provides wellness and lifestyle insights only. Its scores, trends and suggestions are
-      <strong>estimates derived from consumer sensor data and cannot be treated as final, accurate or
-      complete</strong>. They are <strong>not a medical diagnosis and are not a doctor's
-      recommendation</strong>, and must not be used to make health decisions on their own. Always
-      consult a qualified clinician about your health, and seek immediate medical care for any urgent
-      symptoms. Vityss is not a medical device and does not diagnose, treat, cure or prevent any
-      condition.</p>
+      <article class="legal">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: 29 August 2026</p>
 
-    <h2>The short version</h2>
-    <ul>
-      <li>Your <strong>health data never leaves your device</strong>. It is read from Apple Health, processed on-device, and stored on-device.</li>
-      <li>We have <strong>no backend and no account</strong>. Vityss does not upload your Health data, scores, sleep audio, location, name or date of birth anywhere.</li>
-      <li>The only data that can leave the device is <strong>optional, anonymised crash and usage diagnostics</strong> (see below), which you control.</li>
-    </ul>
+        <p>Vityss is built to be private by default. It reads Apple Health, derives your scores on your
+          iPhone and Apple Watch, and shows them to you. This policy explains what stays on your device
+          and the narrow diagnostics that can leave it.</p>
 
-    <h2>Apple Health (HealthKit)</h2>
-    <p>Vityss requests <strong>read-only</strong> access to the Health types it needs (heart rate, HRV,
-      sleep, respiratory rate, activity, and similar). It never writes to Health unless you explicitly
-      turn on optional logging — in which case only the items you log yourself (caffeine, alcohol, water)
-      are saved back to Apple Health so your records stay complete. Health data is used only to compute
-      your on-device insights and is never transmitted off the device.</p>
+        <h2>Not medical advice</h2>
+        <p>Vityss provides wellness and lifestyle insights only. Its scores, trends and suggestions are
+          <strong>estimates derived from consumer sensor data and cannot be treated as final, accurate or
+          complete</strong>. They are <strong>not a medical diagnosis and are not a doctor's
+          recommendation</strong>, and must not be used to make health decisions on their own. Always
+          consult a qualified clinician about your health, and seek immediate medical care for any urgent
+          symptoms. Vityss is not a medical device and does not diagnose, treat, cure or prevent any
+          condition.</p>
 
-    <h2>Microphone &amp; location (Sleep sessions)</h2>
-    <p>During a sleep session you start, Vityss measures bedroom loudness on-device to detect snoring.
-      A short audio clip is saved <strong>only for a confirmed snore</strong>, stored locally on your
-      phone, and never uploaded. Location is used only as a background keep-alive so a call or lock can't
-      stop recording — your location is never read, stored or shared.</p>
+        <h2>The short version</h2>
+        <ul>
+          <li>Your <strong>health data never leaves your device</strong>. It is read from Apple Health, processed on-device, and stored on-device.</li>
+          <li>We have <strong>no backend and no account</strong>. Vityss does not upload your Health data, scores, sleep audio, location, name or date of birth anywhere.</li>
+          <li>The only data that can leave the device is <strong>optional, anonymised crash and usage diagnostics</strong> (see below), which you control.</li>
+          <li>We do <strong>not track you for advertising</strong>. Diagnostics are not linked to third-party data for ads, and we do not share data with data brokers.</li>
+        </ul>
 
-    <h2>Diagnostics (the one thing that can leave the device)</h2>
-    <p>To keep the app stable and understand which features are used, Vityss can send limited diagnostics
-      via Google Firebase:</p>
-    <ul>
-      <li><strong>Crash &amp; performance reporting</strong> (Firebase Crashlytics / Performance) — on by default, opt-out anytime in Settings › Privacy &amp; data sharing.</li>
-      <li><strong>Usage analytics</strong> (Firebase Analytics) — <strong>off by default</strong>, opt-in only.</li>
-    </ul>
-    <p>These carry a fixed, pre-approved list of events and error types. They <strong>never</strong>
-      include your health data, name, date of birth, sex, scores, audio, location, or exact timestamps.
-      You can turn crash reporting and analytics on or off in the app at any time.</p>
+        <h2>Apple Health (HealthKit)</h2>
+        <p>Vityss requests <strong>read-only</strong> access to the Health types it needs (heart rate, HRV,
+          sleep, respiratory rate, activity, and similar). It never writes to Health unless you explicitly
+          turn on optional logging — in which case only the items you log yourself (caffeine, alcohol, water)
+          are saved back to Apple Health so your records stay complete. Health data is used only to compute
+          your on-device insights and is never transmitted off the device.</p>
 
-    <h2>Subscriptions</h2>
-    <p>Vityss Pro is sold through Apple's In-App Purchase. Payments, billing and renewals are handled by
-      Apple — we never see or store your payment details. Entitlements are verified on-device.</p>
+        <h2>Microphone &amp; location (Sleep sessions)</h2>
+        <p>During a sleep session you start, Vityss measures bedroom loudness on-device to detect snoring.
+          A short audio clip is saved <strong>only for a confirmed snore</strong>, stored locally on your
+          phone, and never uploaded. Location is used only as a background keep-alive so a call or lock can't
+          stop recording — your location is never read, stored or shared.</p>
 
-    <h2>Third parties</h2>
-    <ul>
-      <li><strong>Apple</strong> — App Store, HealthKit, and the on-device Foundation Models that power the AI advisor (which runs on your device).</li>
-      <li><strong>Google Firebase</strong> — crash, performance and (opt-in) usage diagnostics only, as described above.</li>
-    </ul>
+        <h2>Diagnostics (the one thing that can leave the device)</h2>
+        <p>To keep the app stable and understand which features are used, Vityss can send limited diagnostics
+          via Google Firebase:</p>
+        <ul>
+          <li><strong>Crash &amp; performance reporting</strong> (Firebase Crashlytics / Performance) — on by default, opt-out anytime in Settings › Privacy &amp; data sharing.</li>
+          <li><strong>Usage analytics</strong> (Firebase Analytics) — <strong>off by default</strong>, opt-in only.</li>
+        </ul>
+        <p>These carry a fixed, pre-approved list of events and error types. They <strong>never</strong>
+          include your health data, name, date of birth, sex, scores, audio, location, or exact timestamps.
+          They are used only for app functionality and product analytics — <strong>not for tracking</strong>
+          under Apple's definition (no advertising ID use, no linking to third-party data for ads, no data brokers).
+          You can turn crash reporting and analytics on or off in the app at any time.</p>
 
-    <h2>Your data &amp; deletion</h2>
-    <p>Because your data lives on your device, you are in control of it. Settings › Preferences &amp; data ›
-      <em>Reset &amp; delete all data</em> erases everything Vityss stored locally. Uninstalling the app
-      removes it too. There is nothing stored on our servers to delete.</p>
+        <h2>Subscriptions</h2>
+        <p>Vityss Pro is sold through Apple's In-App Purchase. Payments, billing and renewals are handled by
+          Apple — we never see or store your payment details. Entitlements are verified on-device.
+          Subscription terms are in our <a href="terms.html">Terms of Use</a>.</p>
 
-    <h2>Children</h2>
-    <p>Vityss is not directed at children and is intended for users old enough to have their own Apple
-      Health data and Apple ID.</p>
+        <h2>Third parties</h2>
+        <ul>
+          <li><strong>Apple</strong> — App Store, HealthKit, and the on-device Foundation Models that power the AI advisor (which runs on your device).</li>
+          <li><strong>Google Firebase</strong> — crash, performance and (opt-in) usage diagnostics only, as described above.</li>
+        </ul>
 
-    <h2>Changes</h2>
-    <p>We may update this policy as the app evolves; material changes will be reflected here with a new
-      "last updated" date.</p>
+        <h2>Your data &amp; deletion</h2>
+        <p>Because your data lives on your device, you are in control of it. Settings › Preferences &amp; data ›
+          <em>Reset &amp; delete all data</em> erases everything Vityss stored locally. Uninstalling the app
+          removes it too. There is nothing stored on our servers to delete.</p>
 
-    <h2>Contact</h2>
-    <p>Questions? Email <a href="mailto:vityss.health@gmail.com">vityss.health@gmail.com</a>.</p>
-  </div>
+        <h2>Children</h2>
+        <p>Vityss is not directed at children and is intended for users old enough to have their own Apple
+          Health data and Apple ID.</p>
+
+        <h2>Changes</h2>
+        <p>We may update this policy as the app evolves; material changes will be reflected here with a new
+          "last updated" date.</p>
+
+        <h2>Contact</h2>
+        <p>Questions? Email <a href="mailto:vityss.health@gmail.com">vityss.health@gmail.com</a>.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> Vityss &nbsp;·&nbsp; Made in India <span style="color:#e0245e">&hearts;</span></div>
+      <div class="foot-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:vityss.health@gmail.com">Support</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
