@@ -229,7 +229,104 @@ body > * { position: relative; z-index: 1; }
 .chip-b { top: 132px; right: 0; animation: bob 5.2s 0.4s ease-in-out infinite; }
 .chip-c { bottom: 72px; left: 18px; animation: bob 4.8s 0.8s ease-in-out infinite; }
 
-.pills { overflow: hidden; padding: 8px 0 28px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.pills { overflow: hidden; padding: 8px 0 20px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+
+.stories { padding: 8px 0 28px; }
+.stories-viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  background: #11131a;
+  position: relative;
+}
+.stories-track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+.story {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 520px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.story > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.story::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 8, 13, 0.82) 0%, rgba(7, 8, 13, 0.45) 42%, rgba(7, 8, 13, 0.12) 100%);
+  pointer-events: none;
+}
+.story-copy {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 44px 72px;
+  max-width: 36ch;
+  color: #f4f6fb;
+}
+.story-copy h2 {
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  margin: 14px 0 12px;
+  color: #f4f6fb;
+  max-width: 14ch;
+}
+.story-copy p { color: rgba(244, 246, 251, 0.86); font-size: 17px; max-width: none; }
+.story-copy .eyebrow {
+  color: #2ad4c8;
+  border-color: rgba(42, 212, 200, 0.45);
+  background: rgba(7, 8, 13, 0.35);
+  width: fit-content;
+}
+.stories-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(7, 8, 13, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.stories-dots button {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.stories-dots button:hover { background: rgba(255, 255, 255, 0.85); }
+.stories-dots button.on {
+  width: 24px;
+  background: #2ad4c8;
+}
 .pills-track {
   display: flex; gap: 10px; width: max-content;
   animation: marquee 28s linear infinite;
@@ -406,6 +503,12 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
   .plans { grid-template-columns: 1fr; }
   .nav-links a:not(.btn):not(.active):not(.nav-keep) { display: none; }
   .legal { padding: 24px 20px 32px; }
+  .story { height: 420px; grid-template-columns: none; }
+  .story::after {
+    background: linear-gradient(180deg, rgba(7, 8, 13, 0.12) 0%, rgba(7, 8, 13, 0.82) 100%);
+  }
+  .story-copy { max-width: none; padding: 28px 24px 32px; }
+  .story-copy h2 { font-size: 28px; max-width: none; }
 }
 
 @media (max-width: 560px) {
@@ -426,5 +529,5 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
   .card:hover, .shot:hover .device, .plan.pro:hover, .btn:hover {
     transform: none;
   }
-  .btn::after { display: none; }
+  .stories-track { transition: none; }
 }
