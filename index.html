@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07080d">
   <title>Vityss | On-Device AI Health App. Free Sleep, Snore, Alcohol and Water Tracking</title>
   <meta name="description" content="On-device AI health advisor for iPhone. Ask about your readiness, sleep and HRV without sending data to a server. Also free sleep tracking, free snore tracking, apnea screener, alcohol tracker, water intake, quit smoking and a life journal.">
   <meta name="keywords" content="AI health app, on-device AI, private AI, AI wellness coach, AI health coach, AI health advisor, AI fitness coach, AI sleep coach, AI recovery coach, Apple Intelligence, on-device LLM, local AI, offline AI, private AI chatbot, health AI chatbot, Ask Vityss, AI insights, AI daily brief, Foundation Models, free snore tracking, free sleep tracking, free sleep tracker, snore tracker, snoring tracker iPhone, apnea tracker, sleep apnea screener, apnea risk, alcohol tracker, drink tracker, alcohol log, quit alcohol, water intake tracker, water tracker, hydration tracker, drink water app, cigarette tracker, cigarette log, smoke tracker, quit smoking, quit smoking app, stop smoking, vape log, life journal, health journal, mood journal, daily journal, body fitness, fitness age, body weight tracker, weight tracker Apple Health, Apple Watch health app, Apple Health app, readiness score, recovery app, HRV tracker, resting heart rate, stress tracker, fasting tracker, intermittent fasting app, medication tracker, pill reminder, caffeine tracker, gut journal, bowel tracker, hearing exposure, mobility tracker, VO2, on-device health, private health app, no account health app, Whoop alternative Apple Watch, Oura alternative iPhone, Vityss">
@@ -63,7 +66,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home">
   <nav class="nav">
     <div class="wrap">
       <a class="brand" href="index.html"><img class="brand-icon" src="icon.png" alt=""> Vityss</a>
@@ -89,8 +92,21 @@
         <p class="made">Made in India <span class="heart">&hearts;</span> &nbsp;·&nbsp; Private by design</p>
       </div>
 
-      <div class="device hero-phone">
-          <img src="shot-today.png" alt="Free sleep tracking and readiness score in the Vityss Daily Brief">
+      <div class="hero-stage">
+        <span class="float-chip chip-a">On-device AI</span>
+        <span class="float-chip chip-b">No account</span>
+        <span class="float-chip chip-c">Private by design</span>
+        <div class="phone-fan" id="phoneFan">
+          <div class="device fan-left">
+            <img src="shot-body.png" alt="Fitness age and body trends in Vityss">
+          </div>
+          <div class="device fan-right">
+            <img src="shot-insights.png" alt="Vityss Insights. Trends and healthspan">
+          </div>
+          <div class="device fan-front hero-phone">
+            <img src="shot-today.png" alt="Free sleep tracking and readiness score in the Vityss Daily Brief">
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -320,6 +336,19 @@
     window.addEventListener("scroll", function () {
       nav.classList.toggle("scrolled", window.scrollY > 8);
     }, { passive: true });
+    var fan = document.getElementById("phoneFan");
+    if (fan && !reduce) {
+      var stage = fan.parentElement;
+      stage.addEventListener("mousemove", function (e) {
+        var r = stage.getBoundingClientRect();
+        var x = ((e.clientX - r.left) / r.width - 0.5) * 14;
+        var y = ((e.clientY - r.top) / r.height - 0.5) * -10;
+        fan.style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
+      });
+      stage.addEventListener("mouseleave", function () {
+        fan.style.transform = "";
+      });
+    }
   </script>
 </body>
 </html>
