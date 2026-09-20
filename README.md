@@ -1,7 +1,9 @@
 # Vityss
 
-Marketing site for Vityss — a passive Apple Watch + iPhone health companion.
+Marketing site for Vityss, a passive Apple Watch + iPhone health companion.
 Hosted with GitHub Pages at https://vitysshealth-arch.github.io/
+
+**App Store:** https://apps.apple.com/gb/app/vityss-your-body-in-one-place/id6803214165
 
 ## Legal pages (App Store)
 
