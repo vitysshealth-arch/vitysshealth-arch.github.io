@@ -14,3 +14,15 @@ Hosted with GitHub Pages at https://vitysshealth-arch.github.io/
 
 Use these URLs in App Store Connect (Privacy Policy field + App Description / EULA) and in the iOS app paywall.
 Enable **Settings → Pages → Deploy from branch `main` / root** on this repo if the site is not live yet.
+
+## Muhurta (sibling app)
+
+Muhurta support pages live under `/muhurta/` on this org site (and also at the project Pages repo `muhurta-site`).
+
+| Page | URL |
+|------|-----|
+| Support / home | https://vitysshealth-arch.github.io/muhurta/ |
+| Privacy | https://vitysshealth-arch.github.io/muhurta/privacy.html |
+| Terms | https://vitysshealth-arch.github.io/muhurta/terms.html |
+
+Recommended App Store Connect Support URL: `https://vitysshealth-arch.github.io/muhurta/`

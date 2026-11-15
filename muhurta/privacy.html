@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0D0D12">
+  <title>Muhurta Privacy Policy</title>
+  <meta name="description" content="How Muhurta handles your data: birth details and charts stay on your device. Location is for place. No cloud ephemeris.">
+  <base href="/muhurta/">
+  <link rel="canonical" href="https://vitysshealth-arch.github.io/muhurta/privacy.html">
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="legal-body">
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img class="brand-icon" src="icon.png" alt=""> Muhurta</a>
+      <div class="nav-links">
+        <a class="nav-keep" href="index.html#features">Features</a>
+        <a class="active" href="privacy.html">Privacy</a>
+        <a class="nav-keep" href="terms.html">Terms</a>
+        <a class="btn" href="mailto:vityss.health@gmail.com">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="legal-page">
+    <div class="wrap">
+      <article class="legal">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated 15 November 2026</p>
+
+        <p class="lede">Muhurta is a privacy-forward iPhone app for Local Lahiri muhurta timing, panchang, kundli and festivals. This policy explains what stays on your device and the narrow network calls used for place search.</p>
+
+        <h2>Not medical or religious authority</h2>
+        <p>Muhurta provides <strong>astrological timing and cultural calendar tools</strong> for personal use. It is
+          <strong>not medical advice</strong>, not a diagnosis, and not a substitute for a qualified clinician.
+          It is also <strong>not a religious authority</strong> and not a substitute for guidance from a
+          pandit or tradition you trust. Treat results as informational estimates from Local Lahiri on-device
+          calculation.</p>
+
+        <h2>The short version</h2>
+        <ul>
+          <li>Your <strong>birth details, kundli charts and muhurta results stay on your device</strong>.</li>
+          <li>Muhurta does <strong>not run a cloud ephemeris or chart backend</strong>. Local Lahiri calculations run on-device.</li>
+          <li><strong>Location</strong> is used to set place and timezone for calculations (and for “current location” when you allow it).</li>
+          <li><strong>Place search</strong> may send the text you type (and place IDs) to Google Places / Time Zone APIs so you can pick a city. Birth charts are not uploaded for astrology.</li>
+          <li>Muhurta does <strong>not</strong> currently ship crash or usage analytics SDKs. There is no optional off-device diagnostics product in the app today.</li>
+          <li>We do <strong>not track you for advertising</strong> and do not sell your data.</li>
+        </ul>
+
+        <h2>Data stored on your device</h2>
+        <p>Depending on what you enter, Muhurta may store locally:</p>
+        <ul>
+          <li>Name and birth date/time you provide for kundli</li>
+          <li>Birth place or current place (name, coordinates, timezone)</li>
+          <li>Preferences, local festival reminders and on-device logs for debugging on your phone</li>
+        </ul>
+        <p>Uninstalling the app removes this data from the device. There is no Muhurta account server holding a copy of your kundli.</p>
+
+        <h2>Location</h2>
+        <p>When you grant location permission, Muhurta uses your location <strong>on-device</strong> to resolve
+          place and timezone for Local Lahiri muhurta, panchang and festival windows. Location is not used for
+          advertising. If permission is denied, you can still pick a place explicitly; the app does not invent
+          a silent default city.</p>
+
+        <h2>Place search (Google)</h2>
+        <p>Birth-place and place pickers use <strong>Google Places API (New)</strong> autocomplete and place
+          details, and may use Google’s Time Zone API after coordinates are known. Those requests include the
+          search text or place identifiers needed to return a place. They are not used to upload your full
+          birth chart or muhurta timeline to an astrology cloud.</p>
+
+        <h2>Notifications</h2>
+        <p>Optional festival or muhurta reminders are scheduled as <strong>local notifications</strong> on your
+          device. Reminder content is not sent to a Muhurta server.</p>
+
+        <h2>No cloud ephemeris</h2>
+        <p>Muhurta’s timing engine is designed to compute Local Lahiri results <strong>on-device</strong>. We do
+          not operate a Muhurta-owned backend that stores your charts or streams ephemeris results keyed to
+          your birth data.</p>
+
+        <h2>Third parties</h2>
+        <ul>
+          <li><strong>Apple</strong> — App Store distribution, device APIs, and (when you purchase) In-App Purchase billing handled by Apple.</li>
+          <li><strong>Google</strong> — Places / Time Zone lookups for place search only, as described above.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>Muhurta is not directed at children. Use requires a device and Apple ID appropriate for the App Store age rating.</p>
+
+        <h2>Changes</h2>
+        <p>We may update this policy as the app evolves. Material changes will refresh the “last updated” date on this page.</p>
+
+        <h2>Contact</h2>
+        <p>Questions? Email <a href="mailto:vityss.health@gmail.com">vityss.health@gmail.com</a>.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> Muhurta · Made in India <span style="color:#e0245e">&hearts;</span></div>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:vityss.health@gmail.com">Support</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
